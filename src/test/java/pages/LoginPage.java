@@ -1,5 +1,7 @@
 package pages;
 
+import java.nio.file.Paths;
+
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
@@ -11,6 +13,7 @@ public class LoginPage {
 	private Locator usernamefield;
 	private Locator passwordfield;
 	private Locator loginbutton;
+	private Locator loginerror;
 	
 	public LoginPage(Page page) {
 		
@@ -21,6 +24,8 @@ public class LoginPage {
 		passwordfield = page.locator("#li-password");
 		
 		loginbutton = page.locator("#login-btn");
+		
+		loginerror = page.locator("#login-error");
 		
 	}
 	
@@ -48,6 +53,12 @@ public class LoginPage {
 	    enterpassword(password);
 	    clicklogin();
 	    
+	}
+	
+	public void takeloginerrorscreenshot(String path) {
+		
+		loginerror.screenshot(new Locator.ScreenshotOptions().setPath(Paths.get(path)));
+		
 	}
 
 }
