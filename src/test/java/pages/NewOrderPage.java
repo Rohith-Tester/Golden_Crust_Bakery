@@ -2,6 +2,7 @@ package pages;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.SelectOption;
 
 import java.nio.file.Paths;
 
@@ -21,7 +22,21 @@ public class NewOrderPage {
 	private Locator savebutton;
 	private Locator applycouponbutton;
 	private Locator cartbutton;
-	private Locator placeorderbutton;
+	private Locator customerdropdown;
+//	private Locator customernamefield;
+//	private Locator phonefieldcart;
+    private Locator pickupradio;
+    private Locator deliveryradio;
+    private Locator cashradio;
+    private Locator onlineradio;
+    private Locator deliveryaddress;
+    private Locator placeorderbutton;
+    private Locator cardnumber;
+    private Locator expiry;
+    private Locator cvv;
+    private Locator nameoncard;
+    private Locator pay;
+    
 	
 	//UPDATED TEXT DISPLAYED ON THE SCREEN
 	private Locator phonetext;
@@ -72,7 +87,25 @@ public class NewOrderPage {
 		
 		cartbutton = page.locator("#pos-cart-toggle");
 		
-		placeorderbutton = page.locator("pos-place-order");
+		customerdropdown = page.locator("#pos-customer-select");
+		
+		deliveryradio = page.locator("input[name='pos-delivery'][value='delivery']");
+		
+		deliveryaddress = page.locator("#pos-address");
+		
+		onlineradio = page.locator("input[name='pos-payment'][value='online']");
+		
+		cardnumber = page.locator("#pos-pay-card-number");
+		
+		expiry = page.locator("#pos-pay-card-expiry");
+		
+		cvv = page.locator("#pos-pay-card-cvv");
+		
+		nameoncard = page.locator("#pos-pay-card-name");
+		
+		pay = page.locator("#pos-pay-pay-submit");
+				
+		placeorderbutton = page.locator("#pos-place-order");
 				
 		//UPDATED DETAILS ON PAGE LOCATORS
 		
@@ -120,7 +153,7 @@ public class NewOrderPage {
 		    
 		}
 		
-		public void clickCart() {
+		public void clickCart1() {
 			
 		    cartbutton.click();
 		    
@@ -170,7 +203,74 @@ public class NewOrderPage {
 	    	
 	        brownieaddbutton.click();
 	    }
-		
+	    
+	    public void clickCart() {
+	    	
+	        cartbutton.click();
+	        
+	    }
+	    
+	    public void selectCustomerByName(String customerName) {
+
+	        customerdropdown.selectOption(new SelectOption().setLabel(customerName));
+	        
+	    }
+	    
+	    public void selectDelivery() {
+	    	
+	        deliveryradio.check();
+	        
+	    }
+	    
+	    public void enterDeliveryAddress(String address) {
+	        
+	        deliveryaddress.fill(address);
+	        
+	    }
+	    
+	    public void selectOnline() {
+	    	
+	        onlineradio.check();
+	        
+	    }
+
+	    public void enterCardNumber(String cardNumber) {
+	    	
+	        cardnumber.fill(cardNumber);
+	        
+	    }
+	    
+	    public void enterExpiry(String expiryValue) {
+	    	
+	        expiry.fill(expiryValue);
+	        
+	    }
+
+	    public void enterCVV(String cvvValue) {
+	    	
+	        cvv.fill(cvvValue);
+	        
+	    }
+	    
+	    public void enterNameOnCard(String name) {
+	    	
+	        nameoncard.fill(name);
+	        
+	    }
+
+	    public void clickPay() {
+	    	
+	        pay.click();
+	        
+	    }
+	    
+	    public void clickPlaceOrder1() {
+	    	
+	        placeorderbutton.click();
+	        
+	    }
+
+	    
 		public void takeContactDetailsScreenshot(String path) {
 
 		    Locator contactDetailsCard =
