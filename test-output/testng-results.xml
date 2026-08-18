@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-13T16:18:52 IST" name="Default suite" finished-at="2026-08-13T16:19:26 IST" duration-ms="33620">
+  <suite started-at="2026-08-18T17:01:01 IST" name="Default suite" finished-at="2026-08-18T17:01:32 IST" duration-ms="31705">
     <groups>
     </groups>
-    <test started-at="2026-08-13T16:18:52 IST" name="Default test" finished-at="2026-08-13T16:19:26 IST" duration-ms="33620">
-      <class name="tests.AddCart">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.AddCart@747ddf94]" started-at="2026-08-13T16:18:52 IST" name="setup" finished-at="2026-08-13T16:19:19 IST" duration-ms="26240" status="PASS">
+    <test started-at="2026-08-18T17:01:01 IST" name="Default test" finished-at="2026-08-18T17:01:32 IST" duration-ms="31705">
+      <class name="tests.TrackOrderTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.TrackOrderTest@747ddf94]" started-at="2026-08-18T17:01:01 IST" name="setup" finished-at="2026-08-18T17:01:21 IST" duration-ms="20849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyCouponWhenCartEmpty()[pri:0, instance:tests.AddCart@747ddf94]" started-at="2026-08-13T16:19:19 IST" name="verifyCouponWhenCartEmpty" finished-at="2026-08-13T16:19:24 IST" duration-ms="5291" status="PASS">
+        <test-method signature="trackorder()[pri:0, instance:tests.TrackOrderTest@747ddf94]" started-at="2026-08-18T17:01:21 IST" name="trackorder" finished-at="2026-08-18T17:01:32 IST" duration-ms="10312" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCouponWhenCartEmpty -->
-        <test-method is-config="true" signature="end()[pri:0, instance:tests.AddCart@747ddf94]" started-at="2026-08-13T16:19:24 IST" name="end" finished-at="2026-08-13T16:19:26 IST" duration-ms="2010" status="PASS">
+        </test-method> <!-- trackorder -->
+        <test-method is-config="true" signature="end()[pri:0, instance:tests.TrackOrderTest@747ddf94]" started-at="2026-08-18T17:01:32 IST" name="end" finished-at="2026-08-18T17:01:32 IST" duration-ms="456" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- tests.AddCart -->
+      </class> <!-- tests.TrackOrderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
