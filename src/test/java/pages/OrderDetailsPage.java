@@ -1,6 +1,7 @@
 package pages;
 
 import com.microsoft.playwright.Locator;
+
 import com.microsoft.playwright.Page;
 
 import com.microsoft.playwright.options.SelectOption;
@@ -19,12 +20,8 @@ public class OrderDetailsPage {
 	
 	//ACTIONS
 	
-//	private Locator baking;
-//	private Locator ready;
 	private Locator statusdropdown;
 	private Locator assign;
-//	private Locator deliverypartnername;
-//	private Locator deliverypartnerphone;
 	private Locator selectdeliverypartner;
 	private Locator save;
 	
@@ -46,17 +43,9 @@ public class OrderDetailsPage {
 		
 		//DROPDOWN ACTIONS
 		
-//		baking = page.locator("option[value='baking']");
-//		
-//		ready = page.locator("option[value='ready']");
-		
 		statusdropdown = page.locator("select[data-status-select]").first();
 		
 		assign = page.locator("button[title='Assign delivery partner']");
-		
-//		deliverypartnername = page.locator("#dp-name");
-//		
-//		deliverypartnerphone = page.locator("#dp-phone");
 		
 		selectdeliverypartner = page.locator("#dp-account");
 		
@@ -97,11 +86,33 @@ public class OrderDetailsPage {
 			
 		}
 		
+		// GET FRESH ORDER NUMBER
+		
+		public String getLatestOrderNumber() {
+			
+			Locator latestOrderRow =
+					page.locator("tbody tr").first();
+			
+			return latestOrderRow
+					.locator("span.font-medium")
+					.innerText()
+					.trim();
+		}
+		
 		//STATUS DROPDOWN
 		
-	    public void changeStatus(String status) {
+	    public void changeStatus(String orderNumber, String status) {
 	    	
-	        statusdropdown.selectOption(status);
+	    	Locator orderRow = page.locator("tbody tr")
+	    			.filter(
+	    					new Locator.FilterOptions()
+	    							.setHasText(orderNumber)
+	    			);
+	    	
+	        orderRow.locator("select[data-status-select]")
+	        		.selectOption(
+	        				new SelectOption().setLabel(status)
+	        		);
 	        
 	    }
 	    
@@ -113,21 +124,11 @@ public class OrderDetailsPage {
 	    	
 	    }
 	    
-//	    public void enterdeliverypartnername(String name) {
-//	    	
-//	    	deliverypartnername.fill(name);
-//	    	
-//	    }
-//	    
-//	    public void enterdeliverypartnerphone(String phone) {
-//	    	
-//	    	deliverypartnerphone.fill(phone);
-//	    	
-//	    }
-	    
 	    public void selectDeliveryPartner(String partnerName) {
 
-	        selectdeliverypartner.selectOption(new SelectOption().setLabel(partnerName));
+	        selectdeliverypartner.selectOption(
+	        		new SelectOption().setIndex(1)
+	        );
 	        
 	    }
 	    

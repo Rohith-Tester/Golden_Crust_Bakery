@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Login and Dashboard Tests</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 12 15:45:26 IST 2026</td>
+<td>Started on:</td><td>Tue Aug 18 18:10:20 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>62 seconds (62984 ms)</td>
+<tr><td>Total time:</td><td>184 seconds (184913 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,327 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.NewOrderTest.verifyeditbakerydetailscontact()'><b>verifyeditbakerydetailscontact</b><br>Test class: tests.NewOrderTest</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Element is not attached to the DOM
+  name=&apos;Error
+  stack=&apos;Error: Element is not attached to the DOM
+    at throwElementIsNotAttached (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:746:9)
+    at throwRetargetableDOMError (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:742:5)
+    at ElementHandle._waitAndScrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:194:16)
+    at async ElementHandle.scrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:197:5)
+    at async ElementHandleDispatcher.scrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\elementHandlerDispatcher.js:98:5)
+    at async ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\progress.js:78:22)
+    at async ElementHandleDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:95:14)
+    at async DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:329:22)
+}
+Call log:
+-   - attempting scroll into view action
+-     - waiting for element to be stable
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.ElementHandleImpl.scrollIntoViewIfNeeded(ElementHandleImpl.java:302)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$scrollIntoViewIfNeeded$6(LocatorImpl.java:487)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$withElement$0(LocatorImpl.java:82)
+	at com.microsoft.playwright.impl.ChannelOwner.withTitle(ChannelOwner.java:98)
+	at com.microsoft.playwright.impl.LocatorImpl.withElement(LocatorImpl.java:71)
+	at com.microsoft.playwright.impl.LocatorImpl.scrollIntoViewIfNeeded(LocatorImpl.java:486)
+	at com.microsoft.playwright.Locator.scrollIntoViewIfNeeded(Locator.java:4440)
+	at pages.NewOrderPage.takeContactDetailsScreenshot(NewOrderPage.java:279)
+	at tests.NewOrderTest.verifyeditbakerydetailscontact(NewOrderTest.java:71)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Element is not attached to the DOM
+  name=&apos;Error
+  stack=&apos;Error: Element is not attached to the DOM
+    at throwElementIsNotAttached (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:746:9)
+    at throwRetargetableDOMError (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:742:5)
+    at ElementHandle._waitAndScrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:194:16)
+    at async ElementHandle.scrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:197:5)
+    at async ElementHandleDispatcher.scrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\elementHandlerDispatcher.js:98:5)
+    at async ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\progress.js:78:22)
+    at async ElementHandleDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:95:14)
+    at async DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:329:22)
+}
+Call log:
+-   - attempting scroll into view action
+-     - waiting for element to be stable
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 39 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1626852381", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1626852381'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Element is not attached to the DOM
+  name=&apos;Error
+  stack=&apos;Error: Element is not attached to the DOM
+    at throwElementIsNotAttached (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:746:9)
+    at throwRetargetableDOMError (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:742:5)
+    at ElementHandle._waitAndScrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:194:16)
+    at async ElementHandle.scrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:197:5)
+    at async ElementHandleDispatcher.scrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\elementHandlerDispatcher.js:98:5)
+    at async ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\progress.js:78:22)
+    at async ElementHandleDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:95:14)
+    at async DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:329:22)
+}
+Call log:
+-   - attempting scroll into view action
+-     - waiting for element to be stable
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.ElementHandleImpl.scrollIntoViewIfNeeded(ElementHandleImpl.java:302)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$scrollIntoViewIfNeeded$6(LocatorImpl.java:487)
+	at com.microsoft.playwright.impl.LocatorImpl.lambda$withElement$0(LocatorImpl.java:82)
+	at com.microsoft.playwright.impl.ChannelOwner.withTitle(ChannelOwner.java:98)
+	at com.microsoft.playwright.impl.LocatorImpl.withElement(LocatorImpl.java:71)
+	at com.microsoft.playwright.impl.LocatorImpl.scrollIntoViewIfNeeded(LocatorImpl.java:486)
+	at com.microsoft.playwright.Locator.scrollIntoViewIfNeeded(Locator.java:4440)
+	at pages.NewOrderPage.takeContactDetailsScreenshot(NewOrderPage.java:279)
+	at tests.NewOrderTest.verifyeditbakerydetailscontact(NewOrderTest.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Element is not attached to the DOM
+  name=&apos;Error
+  stack=&apos;Error: Element is not attached to the DOM
+    at throwElementIsNotAttached (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:746:9)
+    at throwRetargetableDOMError (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:742:5)
+    at ElementHandle._waitAndScrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:194:16)
+    at async ElementHandle.scrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dom.js:197:5)
+    at async ElementHandleDispatcher.scrollIntoViewIfNeeded (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\elementHandlerDispatcher.js:98:5)
+    at async ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\progress.js:78:22)
+    at async ElementHandleDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:95:14)
+    at async DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:329:22)
+}
+Call log:
+-   - attempting scroll into view action
+-     - waiting for element to be stable
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 39 more
+</pre></div></td>
+<td>1</td>
+<td>tests.NewOrderTest@618b19ad</td></tr>
+<tr>
+<td title='tests.OrderDetailsTest.updateOrderStatusAndAssignPartner()'><b>updateOrderStatusAndAssignPartner</b><br>Test class: tests.OrderDetailsTest</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\progress.js:68:28)
+    at FrameDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator(&quot;#dp-account&quot;)
+-     - locator resolved to &lt;select id=&quot;dp-account&quot; class=&quot;form-input&quot;&gt;…&lt;/select&gt;
+-   - attempting select option action
+-     2 × waiting for element to be visible and enabled
+-       - did not find some options
+-     - retrying select option action
+-     - waiting 20ms
+-     2 × waiting for element to be visible and enabled
+-       - did not find some options
+-     - retrying select option action
+-       - waiting 100ms
+-     12 × waiting for element to be visible and enabled
+-        - did not find some options
+-      - retrying select option action
+-        - waiting 500ms
+-     - waiting for element to be visible and enabled
+-   - element was detached from the DOM, retrying
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:678)
+	at com.microsoft.playwright.impl.FrameImpl.selectOptionImpl(FrameImpl.java:645)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:633)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:126)
+	at com.microsoft.playwright.impl.LocatorImpl.selectOption(LocatorImpl.java:521)
+	at com.microsoft.playwright.Locator.selectOption(Locator.java:4690)
+	at pages.OrderDetailsPage.selectDeliveryPartner(OrderDetailsPage.java:130)
+	at tests.OrderDetailsTest.updateOrderStatusAndAssignPartner(OrderDetailsTest.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\progress.js:68:28)
+    at FrameDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator(&quot;#dp-account&quot;)
+-     - locator resolved to &lt;select id=&quot;dp-account&quot; class=&quot;form-input&quot;&gt;…&lt;/select&gt;
+-   - attempting select option action
+-     2 × waiting for element to be visible and enabled
+-       - did not find some options
+-     - retrying select option action
+-     - waiting 20ms
+-     2 × waiting for element to be visible and enabled
+-       - did not find some options
+-     - retrying select option action
+-       - waiting 100ms
+-     12 × waiting for element to be visible and enabled
+-        - did not find some options
+-      - retrying select option action
+-        - waiting 500ms
+-     - waiting for element to be visible and enabled
+-   - element was detached from the DOM, retrying
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 38 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1430199669", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1430199669'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\progress.js:68:28)
+    at FrameDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator(&quot;#dp-account&quot;)
+-     - locator resolved to &lt;select id=&quot;dp-account&quot; class=&quot;form-input&quot;&gt;…&lt;/select&gt;
+-   - attempting select option action
+-     2 × waiting for element to be visible and enabled
+-       - did not find some options
+-     - retrying select option action
+-     - waiting 20ms
+-     2 × waiting for element to be visible and enabled
+-       - did not find some options
+-     - retrying select option action
+-       - waiting 100ms
+-     12 × waiting for element to be visible and enabled
+-        - did not find some options
+-      - retrying select option action
+-        - waiting 500ms
+-     - waiting for element to be visible and enabled
+-   - element was detached from the DOM, retrying
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:678)
+	at com.microsoft.playwright.impl.FrameImpl.selectOptionImpl(FrameImpl.java:645)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:633)
+	at com.microsoft.playwright.impl.FrameImpl.selectOption(FrameImpl.java:126)
+	at com.microsoft.playwright.impl.LocatorImpl.selectOption(LocatorImpl.java:521)
+	at com.microsoft.playwright.Locator.selectOption(Locator.java:4690)
+	at pages.OrderDetailsPage.selectDeliveryPartner(OrderDetailsPage.java:130)
+	at tests.OrderDetailsTest.updateOrderStatusAndAssignPartner(OrderDetailsTest.java:95)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\progress.js:68:28)
+    at FrameDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:95:31)
+    at DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-16950756458986270647\package\lib\server\dispatchers\dispatcher.js:329:39)
+}
+Call log:
+-   - waiting for locator(&quot;#dp-account&quot;)
+-     - locator resolved to &lt;select id=&quot;dp-account&quot; class=&quot;form-input&quot;&gt;…&lt;/select&gt;
+-   - attempting select option action
+-     2 × waiting for element to be visible and enabled
+-       - did not find some options
+-     - retrying select option action
+-     - waiting 20ms
+-     2 × waiting for element to be visible and enabled
+-       - did not find some options
+-     - retrying select option action
+-       - waiting 100ms
+-     12 × waiting for element to be visible and enabled
+-        - did not find some options
+-      - retrying select option action
+-        - waiting 500ms
+-     - waiting for element to be visible and enabled
+-   - element was detached from the DOM, retrying
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 38 more
+</pre></div></td>
+<td>62</td>
+<td>tests.OrderDetailsTest@5e0e82ae</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,40 +397,60 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.LoginTest.password()'><b>password</b><br>Test class: tests.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>tests.LoginTest@130d63be</td></tr>
-<tr>
-<td title='tests.LoginTest.username()'><b>username</b><br>Test class: tests.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>tests.LoginTest@130d63be</td></tr>
-<tr>
 <td title='tests.DashboardTest.verifydashboardpage()'><b>verifydashboardpage</b><br>Test class: tests.DashboardTest</td>
 <td></td>
 <td>2</td>
-<td>tests.DashboardTest@1bb5a082</td></tr>
+<td>tests.DashboardTest@74235045</td></tr>
 <tr>
 <td title='tests.LoginTest.validlogin()'><b>validlogin</b><br>Test class: tests.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>tests.LoginTest@130d63be</td></tr>
+<td>tests.LoginTest@49e53c76</td></tr>
 <tr>
-<td title='tests.NewOrderTest.verifyeditbakerydetailscontact()'><b>verifyeditbakerydetailscontact</b><br>Test class: tests.NewOrderTest</td>
+<td title='tests.LoginTest.username()'><b>username</b><br>Test class: tests.LoginTest</td>
 <td></td>
-<td>4</td>
-<td>tests.NewOrderTest@78691363</td></tr>
+<td>0</td>
+<td>tests.LoginTest@49e53c76</td></tr>
+<tr>
+<td title='tests.CouponTest.verifyCouponWhenCartEmpty()'><b>verifyCouponWhenCartEmpty</b><br>Test class: tests.CouponTest</td>
+<td></td>
+<td>0</td>
+<td>tests.CouponTest@2d3379b4</td></tr>
+<tr>
+<td title='tests.AddCart.verifyCouponWhenCartEmpty()'><b>verifyCouponWhenCartEmpty</b><br>Test class: tests.AddCart</td>
+<td></td>
+<td>10</td>
+<td>tests.AddCart@30c15d8b</td></tr>
+<tr>
+<td title='tests.CouponTest.verifyCouponBelowMinimumValue()'><b>verifyCouponBelowMinimumValue</b><br>Test class: tests.CouponTest</td>
+<td></td>
+<td>1</td>
+<td>tests.CouponTest@2d3379b4</td></tr>
+<tr>
+<td title='tests.TrackOrderTest.trackorder()'><b>trackorder</b><br>Test class: tests.TrackOrderTest</td>
+<td></td>
+<td>10</td>
+<td>tests.TrackOrderTest@6771beb3</td></tr>
 <tr>
 <td title='tests.LoginTest.emptycredentails()'><b>emptycredentails</b><br>Test class: tests.LoginTest</td>
 <td></td>
 <td>0</td>
-<td>tests.LoginTest@130d63be</td></tr>
+<td>tests.LoginTest@49e53c76</td></tr>
+<tr>
+<td title='tests.LoginTest.password()'><b>password</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTest@49e53c76</td></tr>
 <tr>
 <td title='tests.LoginTest.invalidlogin()'><b>invalidlogin</b><br>Test class: tests.LoginTest</td>
 <td></td>
-<td>0</td>
-<td>tests.LoginTest@130d63be</td></tr>
+<td>3</td>
+<td>tests.LoginTest@49e53c76</td></tr>
+<tr>
+<td title='tests.CouponTest.verifyCouponAboveMinimumValue()'><b>verifyCouponAboveMinimumValue</b><br>Test class: tests.CouponTest</td>
+<td></td>
+<td>1</td>
+<td>tests.CouponTest@2d3379b4</td></tr>
 </table><p>
 </body>
 </html>

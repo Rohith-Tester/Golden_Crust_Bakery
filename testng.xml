@@ -10,6 +10,9 @@
             <class name="tests.DashboardTest"/>
             <class name="tests.NewOrderTest"/>
             <class name="tests.CouponTest"/>
+            <class name="tests.AddCart"/>
+            <class name="tests.OrderDetailsTest"/>
+            <class name="tests.TrackOrderTest"/>
         </classes>
 
     </test>

@@ -5,14 +5,19 @@ import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertTha
 import java.nio.file.Paths;
 
 import org.testng.annotations.Listeners;
+
 import org.testng.annotations.Test;
 
 import com.microsoft.playwright.Page;
 
 import base.BaseTest;
+
 import pages.LoginPage;
+
 import pages.NewOrderPage;
+
 import pages.OrderDetailsPage;
+
 import utils.ExtentListener;
 
 @Listeners(ExtentListener.class)
@@ -29,6 +34,7 @@ public class OrderDetailsTest extends BaseTest {
         page.waitForURL("http://localhost/bakery_php/index.php");
         
         page.getByText("Orders").nth(0).click();
+        
         page.getByText("New Order").nth(0).click();
 
         NewOrderPage newOrderPage = new NewOrderPage(page);
@@ -82,11 +88,26 @@ public class OrderDetailsTest extends BaseTest {
         
         OrderDetailsPage orderDetailsPage = new OrderDetailsPage(page);
         
-        orderDetailsPage.changeStatus("Baking");
+        // ONLY CHANGE : GET FRESH ORDER NUMBER
+        
+        String orderNumber =
+        		orderDetailsPage.getLatestOrderNumber();
+        
+        System.out.println(
+        		"Created Order Number : " + orderNumber
+        );
+        
+        orderDetailsPage.changeStatus(
+        		orderNumber,
+        		"Baking"
+        );
         
         System.out.println("Pass : Status Changed Into Baking");
         
-        orderDetailsPage.changeStatus("Ready");
+        orderDetailsPage.changeStatus(
+        		orderNumber,
+        		"Ready"
+        );
         
         System.out.println("Pass : Status Changed Into Ready");
         
@@ -94,9 +115,9 @@ public class OrderDetailsTest extends BaseTest {
         
         orderDetailsPage.selectDeliveryPartner("Naveen (75475454328)");
         
-//        orderDetailsPage.enterdeliverypartnername("Rohith");
-//        
-//        orderDetailsPage.enterdeliverypartnerphone("8347236423");
+//      orderDetailsPage.enterdeliverypartnername("Rohith");
+//      
+//      orderDetailsPage.enterdeliverypartnerphone("8347236423");
         
         orderDetailsPage.clicksave();
         

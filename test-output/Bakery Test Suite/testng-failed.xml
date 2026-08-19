@@ -3,6 +3,13 @@
 <suite name="Failed suite [Bakery Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Login and Dashboard Tests(failed)">
     <classes>
+      <class name="tests.OrderDetailsTest">
+        <methods>
+          <include name="setup"/>
+          <include name="end"/>
+          <include name="updateOrderStatusAndAssignPartner"/>
+        </methods>
+      </class> <!-- tests.OrderDetailsTest -->
       <class name="tests.NewOrderTest">
         <methods>
           <include name="setup"/>

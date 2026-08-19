@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Aug 18 17:01:01 IST 2026</td>
+<td>Started on:</td><td>Wed Aug 19 18:00:27 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>31 seconds (31705 ms)</td>
+<tr><td>Total time:</td><td>26 seconds (26390 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,10 +76,263 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.TrackOrderTest.trackorder()'><b>trackorder</b><br>Test class: tests.TrackOrderTest</td>
-<td></td>
-<td>10</td>
-<td>tests.TrackOrderTest@747ddf94</td></tr>
+<td title='tests.EndToEndOrderTest.completeOrderToRefundFlow()'><b>completeOrderToRefundFlow</b><br>Test class: tests.EndToEndOrderTest</td>
+<td><div><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Error: strict mode violation: getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON) resolved to 13 elements:
+    1) &lt;button disabled type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;Out of stock&lt;/button&gt; aka getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Out of stock&quot;))
+    2) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Banana Bread Loaf&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; .btn&quot;)
+    3) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Blueberry Muffin&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; div:nth-child(3) &gt; .btn&quot;)
+    4) &lt;button type=&quot;button&quot; data-pos-add=&quot;Brownie&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(4) &gt; .btn&quot;)
+    5) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Cheesecake Slice&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(5) &gt; .btn&quot;)
+    6) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chicken Biriyani&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(6) &gt; .btn&quot;)
+    7) &lt;button type=&quot;button&quot; data-pos-add=&quot;Chocolate Cake&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(7) &gt; .btn&quot;)
+    8) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chocolate Chip Cookie&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(8) &gt; .btn&quot;)
+    9) &lt;button type=&quot;button&quot; data-pos-add=&quot;Cinnamon Roll&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(9) &gt; .btn&quot;)
+    10) &lt;button type=&quot;button&quot; data-pos-add=&quot;Croissant&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(10) &gt; .btn&quot;)
+    ...
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON) resolved to 13 elements:
+    1) &lt;button disabled type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;Out of stock&lt;/button&gt; aka getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Out of stock&quot;))
+    2) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Banana Bread Loaf&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; .btn&quot;)
+    3) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Blueberry Muffin&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; div:nth-child(3) &gt; .btn&quot;)
+    4) &lt;button type=&quot;button&quot; data-pos-add=&quot;Brownie&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(4) &gt; .btn&quot;)
+    5) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Cheesecake Slice&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(5) &gt; .btn&quot;)
+    6) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chicken Biriyani&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(6) &gt; .btn&quot;)
+    7) &lt;button type=&quot;button&quot; data-pos-add=&quot;Chocolate Cake&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(7) &gt; .btn&quot;)
+    8) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chocolate Chip Cookie&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(8) &gt; .btn&quot;)
+    9) &lt;button type=&quot;button&quot; data-pos-add=&quot;Cinnamon Roll&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(9) &gt; .btn&quot;)
+    10) &lt;button type=&quot;button&quot; data-pos-add=&quot;Croissant&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(10) &gt; .btn&quot;)
+    ...
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\chromium\crExecutionContext.js:80:13)
+    at async LongStandingScope._race (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\utils\isomorphic\manualPromise.js:94:14)
+    at async evaluateExpression (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\javascript.js:217:12)
+    at async C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:910:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:880:24)
+    at async Frame.click (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:953:27)
+    at async FrameDispatcher.click (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\frameDispatcher.js:117:12)
+    at async ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\progress.js:78:22)
+    at async FrameDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\dispatcher.js:95:14)
+    at async DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\dispatcher.js:329:22)
+}
+Call log:
+-   - waiting for getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:232)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:164)
+	at com.microsoft.playwright.Locator.click(Locator.java:2500)
+	at pages.NewOrderPage.addBaguette(NewOrderPage.java:198)
+	at tests.EndToEndOrderTest.completeOrderToRefundFlow(EndToEndOrderTest.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Error: strict mode violation: getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON) resolved to 13 elements:
+    1) &lt;button disabled type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;Out of stock&lt;/button&gt; aka getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Out of stock&quot;))
+    2) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Banana Bread Loaf&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; .btn&quot;)
+    3) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Blueberry Muffin&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; div:nth-child(3) &gt; .btn&quot;)
+    4) &lt;button type=&quot;button&quot; data-pos-add=&quot;Brownie&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(4) &gt; .btn&quot;)
+    5) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Cheesecake Slice&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(5) &gt; .btn&quot;)
+    6) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chicken Biriyani&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(6) &gt; .btn&quot;)
+    7) &lt;button type=&quot;button&quot; data-pos-add=&quot;Chocolate Cake&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(7) &gt; .btn&quot;)
+    8) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chocolate Chip Cookie&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(8) &gt; .btn&quot;)
+    9) &lt;button type=&quot;button&quot; data-pos-add=&quot;Cinnamon Roll&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(9) &gt; .btn&quot;)
+    10) &lt;button type=&quot;button&quot; data-pos-add=&quot;Croissant&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(10) &gt; .btn&quot;)
+    ...
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON) resolved to 13 elements:
+    1) &lt;button disabled type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;Out of stock&lt;/button&gt; aka getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Out of stock&quot;))
+    2) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Banana Bread Loaf&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; .btn&quot;)
+    3) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Blueberry Muffin&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; div:nth-child(3) &gt; .btn&quot;)
+    4) &lt;button type=&quot;button&quot; data-pos-add=&quot;Brownie&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(4) &gt; .btn&quot;)
+    5) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Cheesecake Slice&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(5) &gt; .btn&quot;)
+    6) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chicken Biriyani&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(6) &gt; .btn&quot;)
+    7) &lt;button type=&quot;button&quot; data-pos-add=&quot;Chocolate Cake&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(7) &gt; .btn&quot;)
+    8) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chocolate Chip Cookie&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(8) &gt; .btn&quot;)
+    9) &lt;button type=&quot;button&quot; data-pos-add=&quot;Cinnamon Roll&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(9) &gt; .btn&quot;)
+    10) &lt;button type=&quot;button&quot; data-pos-add=&quot;Croissant&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(10) &gt; .btn&quot;)
+    ...
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\chromium\crExecutionContext.js:80:13)
+    at async LongStandingScope._race (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\utils\isomorphic\manualPromise.js:94:14)
+    at async evaluateExpression (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\javascript.js:217:12)
+    at async C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:910:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:880:24)
+    at async Frame.click (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:953:27)
+    at async FrameDispatcher.click (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\frameDispatcher.js:117:12)
+    at async ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\progress.js:78:22)
+    at async FrameDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\dispatcher.js:95:14)
+    at async DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\dispatcher.js:329:22)
+}
+Call log:
+-   - waiting for getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace749604930", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace749604930'><pre>com.microsoft.playwright.PlaywrightException: Error {
+  message=&apos;Error: strict mode violation: getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON) resolved to 13 elements:
+    1) &lt;button disabled type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;Out of stock&lt;/button&gt; aka getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Out of stock&quot;))
+    2) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Banana Bread Loaf&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; .btn&quot;)
+    3) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Blueberry Muffin&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; div:nth-child(3) &gt; .btn&quot;)
+    4) &lt;button type=&quot;button&quot; data-pos-add=&quot;Brownie&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(4) &gt; .btn&quot;)
+    5) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Cheesecake Slice&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(5) &gt; .btn&quot;)
+    6) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chicken Biriyani&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(6) &gt; .btn&quot;)
+    7) &lt;button type=&quot;button&quot; data-pos-add=&quot;Chocolate Cake&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(7) &gt; .btn&quot;)
+    8) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chocolate Chip Cookie&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(8) &gt; .btn&quot;)
+    9) &lt;button type=&quot;button&quot; data-pos-add=&quot;Cinnamon Roll&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(9) &gt; .btn&quot;)
+    10) &lt;button type=&quot;button&quot; data-pos-add=&quot;Croissant&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(10) &gt; .btn&quot;)
+    ...
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON) resolved to 13 elements:
+    1) &lt;button disabled type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;Out of stock&lt;/button&gt; aka getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Out of stock&quot;))
+    2) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Banana Bread Loaf&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; .btn&quot;)
+    3) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Blueberry Muffin&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; div:nth-child(3) &gt; .btn&quot;)
+    4) &lt;button type=&quot;button&quot; data-pos-add=&quot;Brownie&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(4) &gt; .btn&quot;)
+    5) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Cheesecake Slice&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(5) &gt; .btn&quot;)
+    6) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chicken Biriyani&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(6) &gt; .btn&quot;)
+    7) &lt;button type=&quot;button&quot; data-pos-add=&quot;Chocolate Cake&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(7) &gt; .btn&quot;)
+    8) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chocolate Chip Cookie&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(8) &gt; .btn&quot;)
+    9) &lt;button type=&quot;button&quot; data-pos-add=&quot;Cinnamon Roll&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(9) &gt; .btn&quot;)
+    10) &lt;button type=&quot;button&quot; data-pos-add=&quot;Croissant&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(10) &gt; .btn&quot;)
+    ...
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\chromium\crExecutionContext.js:80:13)
+    at async LongStandingScope._race (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\utils\isomorphic\manualPromise.js:94:14)
+    at async evaluateExpression (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\javascript.js:217:12)
+    at async C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:910:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:880:24)
+    at async Frame.click (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:953:27)
+    at async FrameDispatcher.click (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\frameDispatcher.js:117:12)
+    at async ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\progress.js:78:22)
+    at async FrameDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\dispatcher.js:95:14)
+    at async DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\dispatcher.js:329:22)
+}
+Call log:
+-   - waiting for getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:56)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:232)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:164)
+	at com.microsoft.playwright.Locator.click(Locator.java:2500)
+	at pages.NewOrderPage.addBaguette(NewOrderPage.java:198)
+	at tests.EndToEndOrderTest.completeOrderToRefundFlow(EndToEndOrderTest.java:81)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.impl.DriverException: Error {
+  message=&apos;Error: strict mode violation: getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON) resolved to 13 elements:
+    1) &lt;button disabled type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;Out of stock&lt;/button&gt; aka getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Out of stock&quot;))
+    2) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Banana Bread Loaf&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; .btn&quot;)
+    3) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Blueberry Muffin&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; div:nth-child(3) &gt; .btn&quot;)
+    4) &lt;button type=&quot;button&quot; data-pos-add=&quot;Brownie&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(4) &gt; .btn&quot;)
+    5) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Cheesecake Slice&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(5) &gt; .btn&quot;)
+    6) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chicken Biriyani&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(6) &gt; .btn&quot;)
+    7) &lt;button type=&quot;button&quot; data-pos-add=&quot;Chocolate Cake&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(7) &gt; .btn&quot;)
+    8) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chocolate Chip Cookie&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(8) &gt; .btn&quot;)
+    9) &lt;button type=&quot;button&quot; data-pos-add=&quot;Cinnamon Roll&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(9) &gt; .btn&quot;)
+    10) &lt;button type=&quot;button&quot; data-pos-add=&quot;Croissant&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(10) &gt; .btn&quot;)
+    ...
+
+  name=&apos;Error
+  stack=&apos;Error: Error: strict mode violation: getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON) resolved to 13 elements:
+    1) &lt;button disabled type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;Out of stock&lt;/button&gt; aka getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(&quot;Out of stock&quot;))
+    2) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Banana Bread Loaf&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; .btn&quot;)
+    3) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Blueberry Muffin&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(2) &gt; div:nth-child(3) &gt; .btn&quot;)
+    4) &lt;button type=&quot;button&quot; data-pos-add=&quot;Brownie&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(4) &gt; .btn&quot;)
+    5) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Cheesecake Slice&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(5) &gt; .btn&quot;)
+    6) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chicken Biriyani&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(6) &gt; .btn&quot;)
+    7) &lt;button type=&quot;button&quot; data-pos-add=&quot;Chocolate Cake&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(7) &gt; .btn&quot;)
+    8) &lt;button type=&quot;button&quot; class=&quot;btn btn-outline btn-sm&quot; data-pos-add=&quot;Chocolate Chip Cookie&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(8) &gt; .btn&quot;)
+    9) &lt;button type=&quot;button&quot; data-pos-add=&quot;Cinnamon Roll&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(9) &gt; .btn&quot;)
+    10) &lt;button type=&quot;button&quot; data-pos-add=&quot;Croissant&quot; class=&quot;btn btn-outline btn-sm&quot;&gt;ADD&lt;/button&gt; aka locator(&quot;div:nth-child(10) &gt; .btn&quot;)
+    ...
+
+    at CRExecutionContext.evaluateWithArguments (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\chromium\crExecutionContext.js:80:13)
+    at async LongStandingScope._race (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\utils\isomorphic\manualPromise.js:94:14)
+    at async evaluateExpression (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\javascript.js:217:12)
+    at async C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:910:22
+    at async Frame.retryWithProgressAndTimeouts (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:880:24)
+    at async Frame.click (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\frames.js:953:27)
+    at async FrameDispatcher.click (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\frameDispatcher.js:117:12)
+    at async ProgressController.run (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\progress.js:78:22)
+    at async FrameDispatcher._runCommand (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\dispatcher.js:95:14)
+    at async DispatcherConnection.dispatch (C:\Users\magdyn\AppData\Local\Temp\playwright-java-6623263956744782875\package\lib\server\dispatchers\dispatcher.js:329:22)
+}
+Call log:
+-   - waiting for getByText(&quot;Baguette&quot;, new Page.GetByTextOptions().setExact(true)).locator(&quot;xpath=ancestor::div[.//button[normalize-space()=&apos;ADD&apos;]][1]&quot;).getByRole(AriaRole.BUTTON)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:262)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
+	... 36 more
+</pre></div></td>
+<td>7</td>
+<td>tests.EndToEndOrderTest@747ddf94</td></tr>
 </table><p>
 </body>
 </html>
