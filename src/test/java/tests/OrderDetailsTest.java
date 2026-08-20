@@ -111,7 +111,9 @@ public class OrderDetailsTest extends BaseTest {
         
         System.out.println("Pass : Status Changed Into Ready");
         
-        orderDetailsPage.clickassign();
+//        orderDetailsPage.clickassign();
+        
+        orderDetailsPage.clickassign(orderNumber);
         
         orderDetailsPage.selectDeliveryPartner("Naveen (75475454328)");
         

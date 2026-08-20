@@ -43,7 +43,7 @@ public class OrderDetailsPage {
 		
 		//DROPDOWN ACTIONS
 		
-		statusdropdown = page.locator("select[data-status-select]").first();
+//		statusdropdown = page.locator("select[data-status-select]").first();
 		
 		assign = page.locator("button[title='Assign delivery partner']");
 		
@@ -116,14 +116,27 @@ public class OrderDetailsPage {
 	        
 	    }
 	    
-	    //ASSIGN DELIVERY PARTNER
+//	    //ASSIGN DELIVERY PARTNER
+//	    
+//	    public void clickassign() {
+//	    	
+//	    	assign.click();
+//	    	
+//	    }
 	    
-	    public void clickassign() {
-	    	
-	    	assign.click();
-	    	
+	    public void clickassign(String orderNumber) {
+
+	        Locator orderRow = page.locator("tbody tr")
+	                .filter(
+	                        new Locator.FilterOptions()
+	                                .setHasText(orderNumber)
+	                );
+
+	        orderRow.locator(
+	                "button[title='Assign delivery partner']"
+	        ).click();
 	    }
-	    
+//	    
 	    public void selectDeliveryPartner(String partnerName) {
 
 	        selectdeliverypartner.selectOption(
